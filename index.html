@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>My Hexo Blog</title>
-    <meta name="author" content="Your Name" />
+    <title>Reimuの秘密小屋</title>
+    <meta name="author" content="Edmund" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta
@@ -61,7 +61,7 @@
         <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
     <nav id="desktop-menu">
         <a class="title" href="/">
-            <span>MY HEXO BLOG</span>
+            <span>REIMUの秘密小屋</span>
         </a>
         
         <a href="/">
@@ -93,7 +93,7 @@
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;MY HEXO BLOG</span>
+            <span>&emsp;REIMUの秘密小屋</span>
         </div>
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
@@ -165,7 +165,7 @@
         <span class="loop"></span>
         <span class="info">
             <div class="wrap">
-                <h1>My Hexo Blog</h1>
+                <h1>Reimuの秘密小屋</h1>
                 <h3></h3>
                 <h5></h5>
             </div>
@@ -181,8 +181,73 @@
         
 
 <div class="post">
+    <a href="/2024/10/08/%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98Particlex/">
+        <h2 class="post-title">配置主题--ParticleX</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/10/8
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h2 id="根目录下-config-yml的修改"><a href="#根目录下-config-yml的修改" class="headerlink" title="根目录下_config.yml的修改"></a>根目录下_config.yml的修改</h2><p>修改根目录的_config.yml中的theme为你刚才下载的文件名，下图以ParticleXt主题为例：</p>
+<h4 id="网站标题"><a href="#网站标题" class="headerlink" title="网站标题"></a>网站标题</h4><h2 id="主题目录下-config-yml的修改"><a href="#主题目录下-config-yml的修改" class="headerlink" title="主题目录下_config.yml的修改"></a>主题目录下<code>_config.yml</code>的修改</h2><h4 id="首页修改"><a href="#首页修改" class="headerlink" title="首页修改"></a>首页修改</h4><h6 id="修改主页头像"><a href="#修改主页头像" class="headerlink" title="修改主页头像"></a>修改主页头像</h6><h6 id="修改首页背景"><a href="#修改首页背景" class="headerlink" title="修改首页背景"></a>修改首页背景</h6><h6 id="修改首页描述"><a href="#修改首页描述" class="headerlink" title="修改首页描述"></a>修改首页描述</h6><h6 id="修改图标"><a href="#修改图标" class="headerlink" title="修改图标"></a>修改图标</h6><h6 id="添加鼠标点击爆炸烟花和特效"><a href="#添加鼠标点击爆炸烟花和特效" class="headerlink" title="添加鼠标点击爆炸烟花和特效"></a>添加鼠标点击爆炸烟花和特效</h6><p>在<code>/themes/hexo-theme-particlex/source/js</code>或者css对面下面添加如下的文件:<br>background.js：流星背景特效</p>
+<pre><code class="bash">!function()&#123;var t=(window.innerWidth+window.innerHeight)/8,n=document.getElementById(&quot;background&quot;),e=n.getContext(&quot;2d&quot;),o=1,i=void 0,r=void 0,a=[],d=void 0,h=void 0,y=&#123;x:0,y:0,tx:0,ty:0,z:5e-4&#125;;function x(t)&#123;t.x=Math.random()*i,t.y=Math.random()*r&#125;function m()&#123;o=window.devicePixelRatio||1,i=window.innerWidth*o,r=window.innerHeight*o,n.width=i,n.height=r,a.forEach(x)&#125;for(var c=0;c&lt;t;c++)a.push(&#123;x:0,y:0,z:.2+.8*Math.random()&#125;);m(),function t()&#123;e.clearRect(0,0,i,r),y.tx*=.95,y.ty*=.95,y.x+=.7*(y.tx-y.x),y.y+=.7*(y.ty-y.y),a.forEach(function(t)&#123;var n,a,e;t.x+=y.x*t.z,t.y+=y.y*t.z,t.x+=(t.x-i/2)*y.z*t.z,t.y+=(t.y-r/2)*y.z*t.z,t.z+=y.z,(t.x&lt;-50||t.x&gt;i+50||t.y&lt;-50||t.y&gt;r+50)&amp;&amp;(t=t,n=&quot;z&quot;,a=Math.abs(y.tx),e=Math.abs(y.ty),1&lt;a&amp;&amp;1&lt;e&amp;&amp;(n=&quot;h&quot;==(e&lt;a?Math.random()&lt;Math.abs(y.x)/(a+e)?&quot;h&quot;:&quot;v&quot;:Math.random()&lt;Math.abs(y.y)/(a+e)?&quot;v&quot;:&quot;h&quot;)?0&lt;y.x?&quot;l&quot;:&quot;r&quot;:0&lt;y.y?&quot;t&quot;:&quot;b&quot;),t.z=.2+.8*Math.random(),&quot;z&quot;===n?(t.z=.1,t.x=Math.random()*i,t.y=Math.random()*r):&quot;l&quot;===n?(t.x=-3,t.y=r*Math.random()):&quot;r&quot;===n?(t.x=i+3,t.y=r*Math.random()):&quot;t&quot;===n?(t.x=i*Math.random(),t.y=-3):&quot;b&quot;===n&amp;&amp;(t.x=i*Math.random(),t.y=r+3))&#125;),a.forEach(function(t)&#123;e.beginPath(),e.lineCap=&quot;round&quot;,e.lineWidth=3*t.z*o,e.strokeStyle=&quot;rgba(102,175,239,.2)&quot;,e.beginPath(),e.moveTo(t.x,t.y);var n=2*y.x,a=2*y.y;Math.abs(n)&lt;.1&amp;&amp;(n=.5),Math.abs(a)&lt;.1&amp;&amp;(a=.5),e.lineTo(t.x+n,t.y+a),e.stroke()&#125;),requestAnimationFrame(t)&#125;(),window.addEventListener(&quot;resize&quot;,m),window.addEventListener(&quot;mousemove&quot;,function(t)&#123;var n,a,e;n=t.clientX,t=t.clientY,&quot;number&quot;==typeof d&amp;&amp;&quot;number&quot;==typeof h&amp;&amp;(a=n-d,e=t-h,y.tx=y.x+a/8*o*1,y.ty=y.y+e/8*o*1),d=n,h=t&#125;),window.addEventListener(&quot;mouseleave&quot;,function()&#123;h=d=null&#125;)&#125;();
+</code></pre>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+        
+    </div>
+    <a href="/2024/10/08/%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98Particlex/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2024/10/08/markdown/">
+        <h2 class="post-title">Markdown 简介</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/10/8
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <p>markdowwns</p>
+<h2 id="第三章-代码块测试"><a href="#第三章-代码块测试" class="headerlink" title="第三章 - 代码块测试"></a>第三章 - 代码块测试</h2>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+        
+    </div>
+    <a href="/2024/10/08/markdown/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
     <a href="/2024/10/08/%E4%BB%A3%E7%A0%81%E5%9D%97%E6%B5%8B%E8%AF%95/">
-        <h2 class="post-title">代码块测试</h2>
+        <h2 class="post-title">更换主题--ParticleX</h2>
     </a>
     <div class="category-and-date">
         
@@ -204,13 +269,16 @@
   hexo init --no-install
   pnpm i
 </code></pre>
-<pre><code>然后就
-</code></pre>
+<p>然后就</p>
 <h2 id="第四章-选择域名和主机"><a href="#第四章-选择域名和主机" class="headerlink" title="第四章 - 选择域名和主机"></a>第四章 - 选择域名和主机</h2><p><code>单句代码</code></p>
 <pre><code class="bash">pnpm add hexo-cli -g
 hexo init --no-install
 pnpm i
 </code></pre>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex?tab=readme-ov-file">https://github.com/theme-particlex/hexo-theme-particlex?tab=readme-ov-file</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_53517370/article/details/128911597">https://blog.csdn.net/qq_53517370/article/details/128911597</a></li>
+</ol>
 
             
         </div>
@@ -249,15 +317,6 @@ pnpm i
 <h2 id="第三章-选择域名和主机"><a href="#第三章-选择域名和主机" class="headerlink" title="第三章 - 选择域名和主机"></a>第三章 - 选择域名和主机</h2><pre><code class="bash">$ hexo deploy
 </code></pre>
 <h2 id="第四章-选择域名和s主机"><a href="#第四章-选择域名和s主机" class="headerlink" title="第四章 - 选择域名和s主机"></a>第四章 - 选择域名和s主机</h2><p>请检查你的 Markdown 文件，确认没有多余的反引号或代码块标记。</p>
-<h3 id="2-为什么是-line，而不是-bash？"><a href="#2-为什么是-line，而不是-bash？" class="headerlink" title="2. 为什么是 line，而不是 bash？"></a>2. 为什么是 <code>line</code>，而不是 <code>bash</code>？</h3><p>代码块的语言标记（如 <code>bash</code>、<code>python</code>、<code>javascript</code> 等）应该在代码块的开始部分定义。如果在你的主题或 Markdown 渲染设置中，将语言标记设置为 <code>line</code>，则可能是以下几个原因：</p>
-<ul>
-<li><p><strong>主题限制</strong>：某些主题可能不支持所有语言的高亮，可能会默认显示为 <code>line</code>。你可以检查你所使用的主题的文档，了解它对代码高亮的支持情况。</p>
-</li>
-<li><p><strong>配置设置</strong>：检查 Hexo 配置文件（通常是 <code>_config.yml</code>），看看是否有关于代码高亮的设置。如果你使用的是较新的 Hexo 版本（7.0.0 及以上），可以直接配置为：</p>
-<pre><code class="bash">$ syntax_highlighter: prismjs
-</code></pre>
-</li>
-</ul>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
 <li><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=333.999.0.0&vd_source=fd97d314f8aadc02417bacd6e335f240">https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=333.999.0.0&amp;vd_source=fd97d314f8aadc02417bacd6e335f240</a></p>
 </li>
@@ -341,7 +400,7 @@ pnpm i
         <div class="avatar">
             <img src="/images/avatar.jpg" alt="avatar" />
         </div>
-        <div class="name">Your Name</div>
+        <div class="name">Edmund</div>
         <div class="description">
             <p>Description<br>…</p>
 
@@ -367,11 +426,11 @@ pnpm i
     <div id="footer-wrap">
         <div>
             &copy;
-            2022 - 2024 My Hexo Blog
+            2022 - 2024 Reimuの秘密小屋
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
-            &commat;Your Name
+            &commat;Edmund
         </div>
         <div>
             Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
