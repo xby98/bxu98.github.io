@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>我的第一篇博客-博客创建之路 | Reimuの秘密小屋</title>
+    <title>短期计划 | Reimuの秘密小屋</title>
     <meta name="author" content="Edmund" />
     <meta name="description" content="努力施工ing" />
     <meta name="keywords" content="" />
@@ -156,40 +156,38 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>我的第一篇博客-博客创建之路</h1>
+        <h1>短期计划</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2024/10/7
+            2024/10/11
         </span>
         
         
     </div>
     
     <div class="content" v-pre>
-        <p>我搭建这个博客搜了好多教程，以下是我搭建的过程。</p>
-<h2 id="第一章-选择博客平台"><a href="#第一章-选择博客平台" class="headerlink" title="第一章 - 选择博客平台"></a>第一章 - 选择博客平台</h2><p>可以选择使用现有的博客平台，或者自己搭建一个独立的博客。这里有几种常见的选择：</p>
-<p>使用博客平台（简单、快速）<br>WordPress.com：不需要太多技术知识，可以快速创建和发布博客。平台提供托管服务，有免费和付费套餐。<br>Medium：适合想专注于写作而不关心技术搭建的人，提供简洁的界面，容易上手。<br>Blogger：Google 提供的免费博客平台，操作简单，适合初学者。<br>自托管博客（更多自定义、专业）<br>如果你想完全掌控自己的博客网站并能够进行更多的自定义，可以选择自托管方式。</p>
-<p>WordPress.org：你需要购买域名和主机，并安装 WordPress。WordPress 是一个强大的内容管理系统（CMS），支持自定义主题和插件，灵活性很高。<br>Jekyll + GitHub Pages：Jekyll 是一个静态网站生成器，适合有一定技术背景的开发者。可以通过 GitHub Pages 免费托管，非常适合开发者展示技术博客。<br>Hexo：Hexo 是一个基于 Node.js 的静态博客生成器，速度快、简单易用，适合前端开发者使用。</p>
-<h2 id="第二章-选择域名和主机"><a href="#第二章-选择域名和主机" class="headerlink" title="第二章 - 选择域名和主机"></a>第二章 - 选择域名和主机</h2><p>如果你选择自托管博客，以下步骤至关重要：</p>
-<p>购买域名：选择一个代表你品牌或个人风格的域名。可以使用域名注册商如 GoDaddy、Namecheap 等购买域名。<br>选择主机服务：购买适合你博客流量和内容需求的主机服务，如：<br>Bluehost：适合新手用户，简单易用。<br>SiteGround：WordPress 推荐的主机之一，速度和安全性较好。<br>GitHub Pages：适合使用 Jekyll 或 Hexo 搭建静态博客，提供免费的托管服务。</p>
-<h2 id="第三章-选择域名和主机"><a href="#第三章-选择域名和主机" class="headerlink" title="第三章 - 选择域名和主机"></a>第三章 - 选择域名和主机</h2><pre><code class="bash">$ hexo deploy
+        <h2 id="一-优化更换主题导致的bug"><a href="#一-优化更换主题导致的bug" class="headerlink" title="一 - 优化更换主题导致的bug"></a>一 - 优化更换主题导致的bug</h2><p>由于主题更换为ParticleX，但是Hexo 有自带的代码高亮，和 ParticleX 的不兼容，从而导致代码块显示为【图片】，可以通过以下步骤来关闭自带代码高亮</p>
+<pre><code class="bash">highlight:
+    enable: false
+prismjs:
+    enable: false
 </code></pre>
-<h2 id="第四章-选择域名和主机"><a href="#第四章-选择域名和主机" class="headerlink" title="第四章 - 选择域名和主机"></a>第四章 - 选择域名和主机</h2><p>请检查你的 Markdown 文件，确认没有多余的反引号或代码块标记。</p>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
-<li><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=333.999.0.0&vd_source=fd97d314f8aadc02417bacd6e335f240">https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=333.999.0.0&amp;vd_source=fd97d314f8aadc02417bacd6e335f240</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/2201_75288693/article/details/138519863#1___170">https://blog.csdn.net/2201_75288693/article/details/138519863#1___170</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">https://github.com/theme-particlex/hexo-theme-particlex</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_53517370/article/details/128911597">https://blog.csdn.net/qq_53517370/article/details/128911597</a></p>
-</li>
-</ol>
-
+<p>如果使用 Hexo 7.0.0 之后的版本只需要修改为：</p>
+<pre><code class="bash">syntax_highlighter:
+</code></pre>
+<p>如果使用 Pandoc 还需要设置一下：</p>
+<pre><code class="bash">pandoc:
+    extra:
+        - no-highlight:
+</code></pre>
+<p>解决后的表现为【图片】</p>
+<h2 id="二-完善’about’页面"><a href="#二-完善’about’页面" class="headerlink" title="二 - 完善’about’页面"></a>二 - 完善’about’页面</h2><p>目前，about页面中预测包含：<br>1、简单的自我介绍<br>2、简要专业技能介绍<br>3、相关社交账号，例如qq，github，linkedin等等</p>
+<h2 id="三-将之前项目中的部分内容转移到该网站中"><a href="#三-将之前项目中的部分内容转移到该网站中" class="headerlink" title="三 - 将之前项目中的部分内容转移到该网站中"></a>三 - 将之前项目中的部分内容转移到该网站中</h2><p>施工ing……</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2>
     </div>
     
     

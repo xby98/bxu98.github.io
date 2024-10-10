@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>Reimuの秘密小屋</title>
     <meta name="author" content="Edmund" />
-    <meta name="description" content="" />
+    <meta name="description" content="努力施工ing" />
     <meta name="keywords" content="" />
     <meta
         name="viewport"
@@ -167,7 +167,7 @@
             <div class="wrap">
                 <h1>Reimuの秘密小屋</h1>
                 <h3></h3>
-                <h5></h5>
+                <h5>努力施工ing</h5>
             </div>
         </span>
     </div>
@@ -181,8 +181,55 @@
         
 
 <div class="post">
+    <a href="/2024/10/11/%E7%9F%AD%E6%9C%9F%E8%AE%A1%E5%88%9210-11/">
+        <h2 class="post-title">短期计划</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2024/10/11
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h2 id="一-优化更换主题导致的bug"><a href="#一-优化更换主题导致的bug" class="headerlink" title="一 - 优化更换主题导致的bug"></a>一 - 优化更换主题导致的bug</h2><p>由于主题更换为ParticleX，但是Hexo 有自带的代码高亮，和 ParticleX 的不兼容，从而导致代码块显示为【图片】，可以通过以下步骤来关闭自带代码高亮</p>
+<pre><code class="bash">highlight:
+    enable: false
+prismjs:
+    enable: false
+</code></pre>
+<p>如果使用 Hexo 7.0.0 之后的版本只需要修改为：</p>
+<pre><code class="bash">syntax_highlighter:
+</code></pre>
+<p>如果使用 Pandoc 还需要设置一下：</p>
+<pre><code class="bash">pandoc:
+    extra:
+        - no-highlight:
+</code></pre>
+<p>解决后的表现为【图片】</p>
+<h2 id="二-完善’about’页面"><a href="#二-完善’about’页面" class="headerlink" title="二 - 完善’about’页面"></a>二 - 完善’about’页面</h2><p>目前，about页面中预测包含：<br>1、简单的自我介绍<br>2、简要专业技能介绍<br>3、相关社交账号，例如qq，github，linkedin等等</p>
+<h2 id="三-将之前项目中的部分内容转移到该网站中"><a href="#三-将之前项目中的部分内容转移到该网站中" class="headerlink" title="三 - 将之前项目中的部分内容转移到该网站中"></a>三 - 将之前项目中的部分内容转移到该网站中</h2><p>施工ing……</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+        
+    </div>
+    <a href="/2024/10/11/%E7%9F%AD%E6%9C%9F%E8%AE%A1%E5%88%9210-11/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
     <a href="/2024/10/08/%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98Particlex/">
-        <h2 class="post-title">配置主题--ParticleX</h2>
+        <h2 class="post-title">配置主题--ParticleX（施工中）</h2>
     </a>
     <div class="category-and-date">
         
@@ -232,8 +279,78 @@
     <div class="description">
         <div class="content" v-pre>
             
-            <p>markdowwns</p>
-<h2 id="第三章-代码块测试"><a href="#第三章-代码块测试" class="headerlink" title="第三章 - 代码块测试"></a>第三章 - 代码块测试</h2>
+            <p>Markdown 是一种轻量级的标记语言，设计初衷是以简单、易读易写的方式编写结构化的文档内容。它的语法规则非常直观，甚至在不转换的情况下也可以清晰地阅读，适合写作博客、文档、README 文件等。Markdown 编写的文件通常使用 .md 或 .markdown 后缀。</p>
+<p><strong>Markdown 的应用场景</strong><br><strong>技术文档</strong>：Markdown 被广泛应用于编写技术文档、项目说明等。<br><strong>博客</strong>：如 Hexo、Jekyll 等静态网站生成器都支持 Markdown 语法。<br><strong>协作平台</strong>：GitHub、GitLab 等平台的 README 文件通常使用 Markdown 编写，便于开发者之间的协作和交流。<br>Markdown 简单直观，非常适合需要快速编写和组织内容的场景。</p>
+<h2 id="常用语法示例"><a href="#常用语法示例" class="headerlink" title="常用语法示例"></a>常用语法示例</h2><ol>
+<li>标题：使用 # 表示标题，# 的数量表示标题的级别。</li>
+</ol>
+<pre><code class="bash"># 一级标题
+## 二级标题
+### 三级标题
+</code></pre>
+<ol start="2">
+<li>列表：<br>无序列表：使用 <code>-</code>、<code>*</code> 或 <code>+</code>。</li>
+</ol>
+<pre><code class="bash">- 项目1
+- 项目2
+- 项目3
+</code></pre>
+<p>有序列表：使用数字加 <code>.</code>。</p>
+<pre><code class="bash">1. 第一项
+2. 第二项
+3. 第三项   
+</code></pre>
+<ol start="3">
+<li><p>粗体和斜体：<br>粗体：<code>**粗体**</code> 或 <code>__粗体__</code><br>斜体：<code>*斜体*</code> 或 <code>_斜体_</code><br>粗斜体：<code>***粗斜体***</code></p>
+</li>
+<li><p>链接：</p>
+</li>
+</ol>
+<pre><code class="bash">[链接文本](https://example.com)
+</code></pre>
+<ol start="5">
+<li>图片：</li>
+</ol>
+<pre><code class="bash">![图片描述](图片链接)
+</code></pre>
+<ol start="6">
+<li>引用：使用 &gt; 表示引用。</li>
+</ol>
+<pre><code class="bash">&gt; 这是一个引用
+</code></pre>
+<p>7.<br>行内代码：使用反引号 &#96; 包裹。</p>
+<pre><code class="bash">这是 `inline code` 示例。
+</code></pre>
+<p>多行代码块：使用三个反引号 或缩进4个空格。</p>
+<pre><code class="bash">```inline code```
+</code></pre>
+<pre><code>    inline code
+</code></pre>
+<ol start="8">
+<li>表格：</li>
+</ol>
+<pre><code class="bash">| 头部1 | 头部2 |
+|-------|-------|
+| 内容1 | 内容2 |
+| 内容3 | 内容4 |
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>头部1</th>
+<th>头部2</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>内容1</td>
+<td>内容2</td>
+</tr>
+<tr>
+<td>内容3</td>
+<td>内容4</td>
+</tr>
+</tbody></table>
+
             
         </div>
     </div>
@@ -247,7 +364,7 @@
 
 <div class="post">
     <a href="/2024/10/08/%E4%BB%A3%E7%A0%81%E5%9D%97%E6%B5%8B%E8%AF%95/">
-        <h2 class="post-title">更换主题--ParticleX</h2>
+        <h2 class="post-title">测试冲突用</h2>
     </a>
     <div class="category-and-date">
         
@@ -263,8 +380,7 @@
     <div class="description">
         <div class="content" v-pre>
             
-            <p>我搭建这个博客搜了好多教程，都不是特别全，就写了这篇教程。</p>
-<p>这里是速度参考</p>
+            <p>我搭建这个博客搜了好多教程，以下是我搭建的过程。</p>
 <h2 id="第三章-代码块测试"><a href="#第三章-代码块测试" class="headerlink" title="第三章 - 代码块测试"></a>第三章 - 代码块测试</h2><pre><code class="bash">  pnpm add hexo-cli -g
   hexo init --no-install
   pnpm i
@@ -309,14 +425,15 @@ pnpm i
     <div class="description">
         <div class="content" v-pre>
             
-            <h2 id="第一章-选择博客平台"><a href="#第一章-选择博客平台" class="headerlink" title="第一章 - 选择博客平台"></a>第一章 - 选择博客平台</h2><p>可以选择使用现有的博客平台，或者自己搭建一个独立的博客。这里有几种常见的选择：</p>
+            <p>我搭建这个博客搜了好多教程，以下是我搭建的过程。</p>
+<h2 id="第一章-选择博客平台"><a href="#第一章-选择博客平台" class="headerlink" title="第一章 - 选择博客平台"></a>第一章 - 选择博客平台</h2><p>可以选择使用现有的博客平台，或者自己搭建一个独立的博客。这里有几种常见的选择：</p>
 <p>使用博客平台（简单、快速）<br>WordPress.com：不需要太多技术知识，可以快速创建和发布博客。平台提供托管服务，有免费和付费套餐。<br>Medium：适合想专注于写作而不关心技术搭建的人，提供简洁的界面，容易上手。<br>Blogger：Google 提供的免费博客平台，操作简单，适合初学者。<br>自托管博客（更多自定义、专业）<br>如果你想完全掌控自己的博客网站并能够进行更多的自定义，可以选择自托管方式。</p>
 <p>WordPress.org：你需要购买域名和主机，并安装 WordPress。WordPress 是一个强大的内容管理系统（CMS），支持自定义主题和插件，灵活性很高。<br>Jekyll + GitHub Pages：Jekyll 是一个静态网站生成器，适合有一定技术背景的开发者。可以通过 GitHub Pages 免费托管，非常适合开发者展示技术博客。<br>Hexo：Hexo 是一个基于 Node.js 的静态博客生成器，速度快、简单易用，适合前端开发者使用。</p>
 <h2 id="第二章-选择域名和主机"><a href="#第二章-选择域名和主机" class="headerlink" title="第二章 - 选择域名和主机"></a>第二章 - 选择域名和主机</h2><p>如果你选择自托管博客，以下步骤至关重要：</p>
 <p>购买域名：选择一个代表你品牌或个人风格的域名。可以使用域名注册商如 GoDaddy、Namecheap 等购买域名。<br>选择主机服务：购买适合你博客流量和内容需求的主机服务，如：<br>Bluehost：适合新手用户，简单易用。<br>SiteGround：WordPress 推荐的主机之一，速度和安全性较好。<br>GitHub Pages：适合使用 Jekyll 或 Hexo 搭建静态博客，提供免费的托管服务。</p>
 <h2 id="第三章-选择域名和主机"><a href="#第三章-选择域名和主机" class="headerlink" title="第三章 - 选择域名和主机"></a>第三章 - 选择域名和主机</h2><pre><code class="bash">$ hexo deploy
 </code></pre>
-<h2 id="第四章-选择域名和s主机"><a href="#第四章-选择域名和s主机" class="headerlink" title="第四章 - 选择域名和s主机"></a>第四章 - 选择域名和s主机</h2><p>请检查你的 Markdown 文件，确认没有多余的反引号或代码块标记。</p>
+<h2 id="第四章-选择域名和主机"><a href="#第四章-选择域名和主机" class="headerlink" title="第四章 - 选择域名和主机"></a>第四章 - 选择域名和主机</h2><p>请检查你的 Markdown 文件，确认没有多余的反引号或代码块标记。</p>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
 <li><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=333.999.0.0&vd_source=fd97d314f8aadc02417bacd6e335f240">https://www.bilibili.com/video/BV1Yb411a7ty/?spm_id_from=333.999.0.0&amp;vd_source=fd97d314f8aadc02417bacd6e335f240</a></p>
 </li>
@@ -357,18 +474,26 @@ pnpm i
     <div class="description">
         <div class="content" v-pre>
             
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
+            <p>Hexo 博客今天终于搭建好了，纪念一下，后续先将网站内其他页面完善，然后将之前项目中的笔记慢慢转移一些，然后后续记录一下自己的前端学习过程。</p>
+<p>先定一个小目标：尽量每过几天就更新一下</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post-创建一个新帖子"><a href="#Create-a-new-post-创建一个新帖子" class="headerlink" title="Create a new post&#x2F;创建一个新帖子"></a>Create a new post&#x2F;创建一个新帖子</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
+</code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
+<h3 id="Run-server-运行服务器"><a href="#Run-server-运行服务器" class="headerlink" title="Run server&#x2F;运行服务器"></a>Run server&#x2F;运行服务器</h3><p>在本地进行调试</p>
+<pre><code class="bash">$ hexo server
+$ hexo s
+</code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
+<h3 id="Clear-cache-清除缓存"><a href="#Clear-cache-清除缓存" class="headerlink" title="Clear cache&#x2F;清除缓存"></a>Clear cache&#x2F;清除缓存</h3><pre><code class="bash">$ hexo clean
+$ hexo c
+</code></pre>
+<h3 id="Generate-static-files-生成静态文件"><a href="#Generate-static-files-生成静态文件" class="headerlink" title="Generate static files&#x2F;生成静态文件"></a>Generate static files&#x2F;生成静态文件</h3><pre><code class="bash">$ hexo generate
+$ hexo g
+</code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
+<h3 id="Deploy-to-remote-sites-部署到远程站点"><a href="#Deploy-to-remote-sites-部署到远程站点" class="headerlink" title="Deploy to remote sites&#x2F;部署到远程站点"></a>Deploy to remote sites&#x2F;部署到远程站点</h3><pre><code class="bash">$ hexo deploy
+$ hexo d
+</code></pre>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
             
